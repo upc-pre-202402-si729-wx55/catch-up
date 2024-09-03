@@ -1,0 +1,8 @@
+<mat-list-item (click)="onClick()">
+  <img [alt]="source.name"
+       [ngSrc]="source.urlToLogo"
+       height="60"
+       width="60"
+       matListItemAvatar>
+  <p matListItemLine><span>{{ source.name }}</span></p>
+</mat-list-item>
