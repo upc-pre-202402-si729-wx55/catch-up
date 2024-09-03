@@ -1,0 +1,5 @@
+<mat-nav-list>
+  <app-source-item (sourceSelected)="onSourceSelected($event)"
+                   *ngFor="let source of sources"
+                   [source]="source"/>
+</mat-nav-list>
