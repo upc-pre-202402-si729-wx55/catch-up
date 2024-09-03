@@ -1,0 +1,17 @@
+.article-card {
+  margin: 4px;
+}
+
+.actions-section {
+  display: flex;
+}
+
+.action-button {
+  font-size: large;
+}
+
+.default-spacer {
+  flex: 1 1 auto;
+}
+
+
