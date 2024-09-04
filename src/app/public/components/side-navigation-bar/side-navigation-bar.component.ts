@@ -32,8 +32,8 @@ import {FooterContentComponent} from "../footer-content/footer-content.component
 })
 export class SideNavigationBarComponent implements OnInit {
 
-  private sources: Array<Source>    = [];
-  private articles: Array<Article>  = [];
+  protected sources: Array<Source>    = [];
+  protected articles: Array<Article>  = [];
   private newsApi: NewsApiService   = inject(NewsApiService);
   private logoApi: LogoApiService   = inject(LogoApiService);
 

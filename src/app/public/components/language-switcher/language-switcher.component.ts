@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
 import {MatButtonToggle, MatButtonToggleGroup} from "@angular/material/button-toggle";
-import {NgForOf} from "@angular/common";
 
 @Component({
   selector: 'app-language-switcher',
@@ -9,7 +8,6 @@ import {NgForOf} from "@angular/common";
   imports: [
     MatButtonToggleGroup,
     MatButtonToggle,
-    NgForOf
   ],
   templateUrl: './language-switcher.component.html',
   styleUrl: './language-switcher.component.css'
