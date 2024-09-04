@@ -10,6 +10,7 @@ import {
 } from "@angular/material/card";
 import {MatAnchor, MatIconButton} from "@angular/material/button";
 import {MatIcon} from "@angular/material/icon";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-article-item',
@@ -24,7 +25,8 @@ import {MatIcon} from "@angular/material/icon";
     MatCardActions,
     MatAnchor,
     MatIconButton,
-    MatIcon
+    MatIcon,
+    TranslateModule
   ],
   templateUrl: './article-item.component.html',
   styleUrl: './article-item.component.css'
