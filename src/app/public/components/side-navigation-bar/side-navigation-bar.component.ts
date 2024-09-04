@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {Source} from "../../../news/model/source.entity";
 import {Article} from "../../../news/model/article.entity";
 import {NewsApiService} from "../../../news/services/news-api.service";
@@ -32,12 +32,10 @@ import {FooterContentComponent} from "../footer-content/footer-content.component
 })
 export class SideNavigationBarComponent implements OnInit {
 
-  sources: Array<Source> = [];
-  articles: Array<Article> = [];
-
-  constructor(private newsApi: NewsApiService,
-              private logoApi: LogoApiService) {
-  }
+  private sources: Array<Source>    = [];
+  private articles: Array<Article>  = [];
+  private newsApi: NewsApiService   = inject(NewsApiService);
+  private logoApi: LogoApiService   = inject(LogoApiService);
 
   searchArticlesForSource(source: any) {
     console.log(`selected source is: ${source.id}`);

@@ -1,14 +1,14 @@
-import { Injectable } from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {environment} from "../../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class NewsApiService {
-  apiKey = 'fecf4feeffa64e4da682e7d268612ce5';
-  baseUrl = 'https://newsapi.org/v2';
-
-  constructor(private http: HttpClient) { }
+  private apiKey: string    = `${environment.newsApiKey}` ;
+  private baseUrl: string   = 'https://newsapi.org/v2';
+  private http: HttpClient  = inject(HttpClient);
 
   getSources() {
     return this.http.get(`${this.baseUrl}/top-headlines/sources?apiKey=${this.apiKey}`);
